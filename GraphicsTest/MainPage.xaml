@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:GraphicsTest"             
+             x:Class="GraphicsTest.MainPage"             
+             >
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <drawable:ClockDrawable               
+                StrokeColor="Blue"
+                x:Key="clockDrawable" />            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid >
+        <GraphicsView
+            x:Name="clockGraphicsView"
+            Drawable="{StaticResource clockDrawable}"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            HeightRequest="300"
+            WidthRequest="300"
+            />
+
+      
+    </Grid>
+
+
+
+</ContentPage>
